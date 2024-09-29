@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="wclassth=device-wclassth, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Handjet:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Portfolio</title>
+
+    <link rel="stylesheet" href="./css/index.css" />
+    <script src="./scrypt.js"></script>
+  </head>
+  <body>
+    <!--Меню и фон-->
+    <div class="matrix-bg">
+      <canvas id="matrix-canvas"></canvas>
+    </div>
+    <header class="header">
+      <nav>
+        <div class="icoImg"></div>
+        <div>Обо мне</div>
+        <div>Навыки</div>
+        <div>Стеки</div>
+        <div>Связаться</div>
+      </nav>
+    </header>
+
+    <!--Контент-->
+    <div class="content">
+
+      <!--Приветствие + фото -->
+      <div class="wellcom">
+        <div class="wellcomLeft">
+          <h1>Developer Сергей Головня</h1>
+          <p class = "descript">
+            Готов воплотить ваши идеи в жизнь. Давайте создадим что-то уникальное!
+          </p>
+          <div class="computerWindow">
+            <d iv class="iconline">
+              <div>
+                <img class="icon" src="./img/ico/icoHTML.png" alt="icoHTML" />
+              </div>
+              <div>
+                <img class="icon" src="./img/ico/icoCSS.png" alt="icoCSS" />
+              </div>
+              <div>
+                <img class="icon" src="./img/ico/icoJS.png" alt="icoJS" />
+              </div>
+            </d>
+            <p>Комерческий опыт 3+</p>
+          </div>
+        </div>
+        <!--Фото-->
+        <div>
+          <div class="portfolio-container">
+              <div class="portfolio-item">
+                  <div class="cover item">
+                      <h1>Коротко <br>обо мне</h1>
+                      <div class="card-back">
+                          <div class="scroll-text">
+                            <p>Привет! Давай познакомимся поближе. Расскажу немного о себе...</p>
+
+                            <p>Я фронтенд-разработчик с более чем 3-летним опытом в IT-сфере. За это время мне удалось реализовать несколько интересных проектов, например:</p>
+
+                            <ul>
+                              <li>Разработка адаптивного веб-интерфейса для крупного e-commerce проекта, что привело к увеличению конверсии на 25%</li>
+                              <li>Создание интерактивной панели управления с использованием React и D3.js для визуализации данных в реальном времени</li>
+                              <li>Оптимизация производительности клиентской части веб-приложения, что сократило время загрузки на 40%</li>
+                            </ul>
+
+                            <p>В своей работе я стремлюсь создавать интуитивно понятные и эффективные пользовательские интерфейсы. Моя специализация - разработка с использованием HTML5, CSS3 и JavaScript (ES6+), а также работа с популярными фреймворками, такими как React, Vue.js и Angular.</p>
+
+                            <p>Я постоянно совершенствую свои навыки в области UX/UI дизайна и современных фронтенд-технологий. Всегда открыт для новых вызовов и интересных проектов, где могу применить свой опыт для создания высококачественных и инновационных веб-приложений.</p>
+
+                            <p>Буду рад обсудить, как мой опыт может быть полезен для твоего проекта!</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Что умею-->
+      <div class="skills">
+        <h2>Что я умею</h2>
+        <!--Карточки умений-->
+        <div class="skill-cards">
+          <!--Фронтенд-->
+          <div class="skill-card">
+            <div class="skill-card-inner">
+              <div class="skill-card-front">
+                <h3>Фронтенд</h3>
+              </div>
+              <div class="skill-card-back">
+                <ul>
+                  <li>JavaScript (ES2017/ES8 и новее)</li>
+                  <li>React: более 2 лет опыта</li>
+                  <li>TypeScript</li>
+                  <li>HTML5 и CSS3</li>
+                  <li>State Management: Redux, MobX, Effector</li>
+                  <li>Webpack и Vite</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!--Бэкенд-->
+          <div class="skill-card">
+            <div class="skill-card-inner">
+              <div class="skill-card-front">
+                <h3>Бэкенд</h3>
+              </div>
+              <div class="skill-card-back">
+                <ul>
+                  <li>Node.js: разработка серверной части</li>
+                  <li>GraphQL: разработка API</li>
+                  <li>Docker: контейнеризация приложений</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!--Доп навыки-->
+          <div class="skill-card">
+            <div class="skill-card-inner">
+              <div class="skill-card-front">
+                <h3>Дополнительные навыки</h3>
+              </div>
+              <div class="skill-card-back">
+                <ul>
+                  <li>Git: продвинутое использование</li>
+                  <li>Микрофронтенды</li>
+                  <li>Безопасность веб-приложений</li>
+                  <li>Linux/UNIX</li>
+                  <li>TanStack Query</li>
+                  <li>Nginx</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Лайф стайл-->
+      <div class="lifeStyle">
+        <!--Оглавления-->
+        <div>
+          <h2>Лайф стайл</h2>
+          <p>Каждое мое увлечении выбрано для саморазвития.</p>
+        </div>
+        <!--Карточки-->
+        <div class="cardList">
+          <div class="card">
+            <div class="image-container">
+              <h3>Серфинг</h3>
+              <p>
+                Люблю бороться со стихией и сохранять спокойствие в самых
+                неожиданных, опасных ситуациях. Когда я справляюсь с стрессом, то
+                ощущаю как расту над собой и становлюсь хозяином ситуации.
+              </p>
+              <img
+                src="./img/hobby/backGroundSerf.jpg"
+                alt="backGroundSerf"
+                class="background-image"
+              />
+              <img
+                src="./img/hobby/shark.png"
+                alt="serf"
+                class="foreground-image"
+              />
+              <img src="./img/hobby/surfingMan-transformed.png" alt="shark" class="second-image" />
+              <div class="ramka"></div>
+            </div>
+          </div>
+          <div class="card2">
+            <div class="image-container">
+              <h3>Каратэ</h3>
+              <p>
+                Люблю бороться со стихией и сохранять спокойствие в самых
+                неожиданных, опасных ситуациях. Когда я справляюсь с стрессом, то
+                ощущаю как расту над собой и становлюсь хозяином ситуации.
+              </p>
+              <img
+                src="./img/hobby/backGroundKiokushin.webp"
+                alt="backGroundKiokushin"
+                class="background-image"
+              />
+              <img
+                src="./img/hobby/kiokushin.png"
+                alt="Киокушин"
+                class="foreground-image"
+              />
+              <img
+                src="./img/hobby/manFly-transformed.png"
+                alt="manFly"
+                class="second-image"
+              />
+              <div class="ramka"></div>
+            </div>
+          </div>
+          <div class="card3">
+            <div class="image-container">
+              <h3>Шахматы</h3>
+              <p>
+                Люблю бороться со стихией и сохранять спокойствие в самых
+                неожиданных, опасных ситуациях. Когда я справляюсь с стрессом, то
+                ощущаю как расту над собой и становлюсь хозяином ситуации.
+              </p>
+              <img
+                src="./img/hobby/backGroundShees.jpg"
+                alt="backGroundShees"
+                class="background-image"
+              />
+              <img
+                src="./img/hobby/shees.png"
+                alt="shees"
+                class="foreground-image"
+              />
+              <img
+                src="./img/hobby/kingChees-transformed.png"
+                alt="kingChees"
+                class="second-image"
+              />
+              <div class="ramka"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Футетр с формой-->
+      <footer class="footer">
+        <div>Email: experienced.frontend@example.com</div>
+        <div>GitHub: github.com/experienced-frontend</div>
+        <div>LinkedIn: linkedin.com/in/experienced-frontend</div>
+      </footer>
+    </div>
+
+
+  </body>
+</html>

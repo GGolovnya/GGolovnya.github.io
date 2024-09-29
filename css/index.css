@@ -1,0 +1,563 @@
+/* =================== Основные настройки =================== */
+html, body {
+  /* Отступы */
+  margin: 0;
+  /* Типография */
+  font-family: "Exo 2", sans-serif;
+  color: #2f2f2f;
+}
+
+body {
+  /* Отображение */
+  display: flex;
+  /* Размеры */
+  min-height: 100vh;
+}
+
+/* Типография */
+h1, h2 {
+  /* Типография */
+  font-family: "Handjet", sans-serif;
+  font-weight: bold;
+  font-variant-caps: all-petite-caps;
+  color: #282828;
+}
+
+h1 {
+  /* Типография */
+  font-size: 60px;
+  /* Отступы */
+  margin: 0;
+}
+
+h2 {
+  /* Типография */
+  font-size: 40px;
+  /* Отступы */
+}
+
+p {
+  /* Отступы */
+  padding: 0px;
+}
+
+/* =================== Настройка меню =================== */
+.header {
+  /* Размеры */
+  width: 140px;
+  height: 100vh;
+  /* Позиционирование */
+  position: sticky;
+  top: 0;
+  /* Фон */
+  background-color: #fcfcfc;
+  /* Отступы */
+  padding: 20px;
+  /* Модель блока */
+  box-sizing: border-box;
+  /* Границы */
+  border-right: 2px solid #e0e0e0;
+  /* Анимация */
+  transition: box-shadow 0.3s ease;
+}
+
+.header:hover {
+  /* Тени */
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.icoImg {
+  /* Размеры */
+  width: 50px;
+  height: 50px;
+  /* Позиционирование */
+  position: relative;
+  /* Картинка */
+  background-image: url('../img/ico/icoLogo.png');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Навигация */
+nav{
+  /* Отображение */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:flex-start;
+  gap:20px;
+  /* Размеры */
+  height: 100%;
+}
+
+nav div {
+  /* Отступы */
+  margin-bottom: 15px;
+  /* Курсор */
+  cursor: pointer;
+}
+
+/* =================== Настройка основного контента =================== */
+.content {
+  /* Размеры */
+  flex: 1;
+  /* Модель блока */
+  box-sizing: border-box;
+  /* Прокрутка */
+  overflow-y: auto;
+}
+
+
+
+.wellcom {
+  /* Отображение */
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* ======= Контейнер с иконками ======= */
+.wellcomLeft {
+  display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.descript  {
+  /* Типография */
+  font-size: 24px;
+  width: 380px;
+  font-family: "Handjet", sans-serif;
+}
+.computerWindow{
+  width: 100%;
+  height: 160px;
+  background-color: #282828;
+  border-radius: 20px;
+  color: #ccc;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  text-align: center;
+}
+
+.computerWindow p {
+  width: 240px;
+}
+
+.iconline {
+    /* Отображение */
+  display: flex;
+  justify-content: center;
+  /* Отступы */
+  gap: 40px;
+}
+
+.icon {
+  /* Размеры */
+  width: 40px;
+  height: 40px;
+  /* Анимация */
+  transition: transform 0.3s ease;
+  mix-blend-mode:lighten;
+}
+
+.icon:hover {
+  /* Трансформация */
+  transform: scale(1.2)
+}
+
+/* ======= Контейнер с фото и текстом ======= */
+
+.portfolio-item {
+  position: relative;
+  height: 400px;
+  width: 300px;
+  transition: ease all 0.6s;
+  perspective: 1200px;
+
+}
+
+.portfolio-item:hover .cover {
+  transform: rotateX(0deg) rotateY(-180deg);
+}
+
+.portfolio-item:hover .cover:before {
+  transform: translateZ(30px);
+}
+
+.portfolio-item:hover .cover:after {
+  background-color: black;
+}
+
+.portfolio-item:hover .cover h1 {
+  transform: translateZ(100px);
+}
+
+.portfolio-item:hover .cover .price {
+  transform: translateZ(60px);
+}
+
+.portfolio-item .cover {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  transform-style: preserve-3d;
+  transition: ease all 0.6s;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.portfolio-item .cover:before {
+  content: '';
+  position: absolute;
+  border: 5px solid rgba(221, 235, 29, 0.976);
+  box-shadow: 0 0 12px rgba(0,0,0,.3);
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  z-index: 2;
+  transition: ease all 2.3s;
+  transform-style: preserve-3d;
+  transform: translateZ(0px);
+}
+
+.portfolio-item .cover:after {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 2;
+  transition: ease all 1.3s;
+  background: rgba(0,0,0,.4);
+}
+
+.portfolio-item .cover.item {
+  background-image: url('.././img/foto/SGfoto.JPG');
+}
+
+.portfolio-item .cover h1 {
+  font-weight: 600;
+  position: absolute;
+  bottom: 55px;
+  left: 50px;
+  color: white;
+  transform-style: preserve-3d;
+  transition: ease all 2.3s;
+  z-index: 3;
+  font-size: 3em;
+  transform: translateZ(0px);
+}
+
+.portfolio-item .cover .price {
+  font-weight: 200;
+  position: absolute;
+  top: 55px;
+  right: 50px;
+  color: white;
+  transform-style: preserve-3d;
+  transition: ease all 2.3s;
+  z-index: 4;
+  font-size: 2em;
+  transform: translateZ(0px);
+}
+
+.portfolio-item .card-back {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #2f2f2f;
+  transform-style: preserve-3d;
+  transition: ease all 2.3s;
+  transform: translateZ(-1px) rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.portfolio-item .card-back .scroll-text {
+  width: 80%;
+  height: 80%;
+  overflow-y: auto;
+  padding: 20px;
+  color: white;
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+.portfolio-item .card-back .scroll-text::-webkit-scrollbar {
+  width: 5px;
+}
+
+.portfolio-item .card-back .scroll-text::-webkit-scrollbar-track {
+  background: #0b0f08;
+}
+
+.portfolio-item .card-back .scroll-text::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+.portfolio-item .card-back .scroll-text::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* ======= Карточки умений ======= */
+.wellcomRight {
+  width: 300px;
+  height: 400px;
+  perspective: 1000px;
+}
+
+.flip-card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.wellcomRight:hover .flip-card {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* для поддержки Safari */
+  backface-visibility: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.flip-card-front {
+  background-color: #f1f1f1;
+  z-index: 2; /* Убедитесь, что передняя сторона отображается поверх */
+}
+
+.flip-card-back {
+  background-color: rgba(225, 225, 225, 0.8);
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.skills {
+  padding: 20px;
+}
+
+.skill-cards {
+  display: flex;
+  justify-content:space-between;
+  flex-wrap: wrap;
+}
+
+.skill-card {
+  width: 340px;
+  height: 340px;
+  perspective: 1000px;
+}
+
+.skill-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.skill-card:hover .skill-card-inner {
+  transform: rotateY(180deg);
+}
+
+.skill-card-front, .skill-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.skill-card-front {
+  background-color: #f1f1f1;
+}
+
+.skill-card-back {
+  background-color: #282828;
+  color: #ccc;
+  transform: rotateY(180deg);
+  text-align: left;
+}
+
+.skill-card-back ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skill-card-back li {
+  margin: 10px 0;
+}
+
+.skill-card h3 {
+  font-size: 24px;
+  color: #333;
+  padding: 20px;
+}
+
+/* ======= Лайфстайл ======= */
+
+.lifeStyle{
+  padding: 20px;
+}
+/* ======= 3Д карточки ======= */
+.cardList {
+  /* Отображение */
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  /* Отступы */
+  margin: 40px 0px 40px;
+  gap: 20px;
+}
+
+.card, .card2, .card3 {
+  /* Размеры */
+  width: 340px;
+  height: 340px;
+  /* Фон */
+  background-color: white;
+  /* Границы */
+  border-radius: 20px;
+  /* Тени */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* Прокрутка */
+  overflow: hidden;
+  /* Позиционирование */
+  position: relative;
+  /* Анимация */
+  transition: transform 0.3s ease;
+}
+
+.image-container {
+  /* Размеры */
+  width: 100%;
+  height: 100%;
+  /* Позиционирование */
+  position: relative;
+  /* Прокрутка */
+  overflow: hidden;
+}
+
+.background-image, .foreground-image, .second-image, .ramka {
+  /* Позиционирование */
+  position: absolute;
+  /* Анимация */
+  transition: transform 0.3s ease;
+}
+
+.background-image {
+  /* Размеры */
+  width: 105%;
+  height: 105%;
+  /* Отображение */
+  object-fit: cover;
+  /* Позиционирование */
+  top: -2.5%;
+  left: -2.5%;
+}
+
+.foreground-image {
+  /* Позиционирование */
+  top: 20%;
+  left: 30%;
+  /* Размеры */
+  max-width: 80%;
+  max-height: 80%;
+  /* Слои */
+  z-index: 2;
+}
+
+.second-image {
+  /* Позиционирование */
+  top: 4%;
+  left: -4%;
+  /* Размеры */
+  max-width: 55%;
+  max-height: 60%;
+  /* Слои */
+  z-index: 1;
+}
+
+.ramka {
+  /* Позиционирование */
+  top: 5%;
+  left: 5%;
+  /* Размеры */
+  width: 90%;
+  height: 90%;
+  /* Границы */
+  border: 10px solid rgb(207, 225, 13);
+  /* Модель блока */
+  box-sizing: border-box;
+  /* Слои */
+  z-index: 1;
+}
+
+/* =================== Настройка футера =================== */
+.footer {
+  /* Фон */
+  background-color: #272638;
+  color: #ccc;
+  /* Размеры */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px 0px 20px 0px;
+  gap: 20px;
+}
+
+
+
+/* ================= Фитчи ================= */ 
+
+/*  Матрица  */
+.matrix-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+#matrix-canvas {
+  opacity: 0.1;
+}
+/*  /////////////////////  */
+
+/*  Иконка  */
+#infinityCanvas {
+}
