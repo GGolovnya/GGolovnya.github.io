@@ -88,6 +88,9 @@ nav{
   gap:20px;
   /* Размеры */
   height: 100%;
+  font-variant-caps: all-petite-caps;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 nav div {
@@ -95,6 +98,7 @@ nav div {
   margin-bottom: 15px;
   /* Курсор */
   cursor: pointer;
+  width: 100%;
 }
 
 /* =================== Настройка основного контента =================== */
@@ -105,6 +109,7 @@ nav div {
   box-sizing: border-box;
   /* Прокрутка */
   overflow-y: auto;
+  flex: 1 0 auto;
 }
 
 
@@ -528,15 +533,51 @@ nav div {
 .footer {
   /* Фон */
   background-color: #272638;
-  color: #ccc;
+  color:rgb(207, 225, 13);
   /* Размеры */
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  flex-direction: wrap;
   padding: 20px 0px 20px 0px;
   gap: 20px;
+  flex-shrink: 0;
+}
+
+.icoGit, .icoLinkedin, .icoInsta, .icoTelegram, .icoWhatsApp, .icoMail {
+  /* Размеры */
+  width: 40px;
+  height: 40px;
+  /* Позиционирование */
+  position: relative;
+  /* Картинка */
+  background-size: cover;
+  background-position: center;
+}
+
+.icoGit {
+  background-image: url('../img/ico/icoGit.png');
+}
+
+.icoLinkedin {
+  background-image: url('../img/ico/icoLinkedin.png');
+}
+
+.icoInsta {
+  background-image: url('../img/ico/icoInsta.png');
+}
+
+.icoTelegram {
+  background-image: url('../img/ico/icoTelegram.png');
+}
+
+.icoWhatsApp {
+  background-image: url('../img/ico/icoWhatsApp.png');
+}
+
+.icoMail {
+  background-image: url('../img/ico/icoMail.png');
 }
 
 
@@ -555,9 +596,4 @@ nav div {
 
 #matrix-canvas {
   opacity: 0.1;
-}
-/*  /////////////////////  */
-
-/*  Иконка  */
-#infinityCanvas {
 }
